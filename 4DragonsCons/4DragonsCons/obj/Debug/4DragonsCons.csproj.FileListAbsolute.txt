@@ -1,0 +1,6 @@
+c:\users\nez\documents\visual studio 2015\Projects\4DragonsCons\4DragonsCons\bin\Debug\4DragonsCons.exe.config
+C:\Users\Nez\documents\visual studio 2015\Projects\4DragonsCons\4DragonsCons\bin\Debug\4DragonsCons.exe
+C:\Users\Nez\documents\visual studio 2015\Projects\4DragonsCons\4DragonsCons\bin\Debug\4DragonsCons.pdb
+C:\Users\Nez\documents\visual studio 2015\Projects\4DragonsCons\4DragonsCons\obj\Debug\4DragonsCons.csprojResolveAssemblyReference.cache
+C:\Users\Nez\documents\visual studio 2015\Projects\4DragonsCons\4DragonsCons\obj\Debug\4DragonsCons.exe
+C:\Users\Nez\documents\visual studio 2015\Projects\4DragonsCons\4DragonsCons\obj\Debug\4DragonsCons.pdb
