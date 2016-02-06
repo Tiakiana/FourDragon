@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _4DragonsCons
 {
-    class CardResearch : ICard
+    class CardWorsenRelationship : ICard
     {
         public int cost
         {
@@ -15,7 +15,8 @@ namespace _4DragonsCons
             set;
         }
 
-        public CardResearch(Town own) {
+        public CardWorsenRelationship(Town own)
+        {
 
             owner = own;
         }
@@ -32,12 +33,14 @@ namespace _4DragonsCons
 
         public void OnComplete()
         {
-          
+
         }
 
         public void OnDraw()
         {
-            owner.SetDiscovery(1);
+          
+
+
         }
 
         public void OnProduction()
@@ -46,17 +49,20 @@ namespace _4DragonsCons
 
         public void OnRelation()
         {
-            throw new NotImplementedException();
+           
         }
 
         public void OnResearch()
         {
-            throw new NotImplementedException();
+        
         }
 
         public override string ToString()
         {
-            return "Research";
+
+            //Mangler implementering
+            return "Worsen relationship to ";
         }
+
     }
 }

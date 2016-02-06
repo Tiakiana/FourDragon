@@ -42,5 +42,22 @@ namespace _4DragonsCons
         public void OnProduction()
         {
         }
+
+        public void OnRelation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnResearch()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return "Production";
+        }
+
+        
     }
 }

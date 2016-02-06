@@ -83,7 +83,9 @@ namespace _4DragonsCons
 
         }
 
-       
+        public string GetName() {
+            return name;
+        }
         // Getters and setters
         #region Region Getters and Setters
         public void SetMaterial(int chng) {
@@ -120,6 +122,13 @@ namespace _4DragonsCons
         public List<ICard> GetProjects() {
             return projects;
         }
+        public List<Relation> GetRelations() {
+
+            return relations;
+        }
+        public List<ICard> GetDecisions() {
+            return decisions;
+        }
 
         #endregion getters and setters
 
@@ -149,7 +158,7 @@ namespace _4DragonsCons
                 drawnCard.OnDraw();
                 decisionsDisc.Add(drawnCard);
                 decisions.RemoveAt(0);
-                res += " " + drawnCard.ToString();
+                res += drawnCard.ToString();
                 return res;
             }
             else
@@ -169,11 +178,11 @@ namespace _4DragonsCons
        // ---------------------------------------------------Take The Turn! ----------------------------------
 
         internal string TakeTurn() {
-            string s = "";
+            string s = name;
 
             for (int i = 0; i < population; i++)
             {
-                s += DrawCard();
+                s += " draws " + DrawCard();
             }
 
             if (ongoingProjects.Count>0 && ongoingProjects[0].cost<= material)
@@ -186,7 +195,7 @@ namespace _4DragonsCons
             {
                 research -= nextResearch;
                 nextResearch++;
-                s += " We discovered " + discoveries[0].ToString();
+                s += "\n" + name + " discovered " + discoveries[0].ToString();
                 discoveries[0].OnDraw();
                 
             }
@@ -222,7 +231,7 @@ namespace _4DragonsCons
             }
 
 
-            return name + "; Material: " + material + " Research: " + research + " Population: " + population + " Food: " + food + " "+ s;
+            return name + "; Material: " + material + " Research: " + research + " Population: " + population + " Food: " + food + " "+ s + "\n";
         }
     }
 

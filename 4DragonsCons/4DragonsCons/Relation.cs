@@ -13,6 +13,13 @@ namespace _4DragonsCons
 
         int relationship { get; set; }
 
+        public Relation(Town own, Town oth) {
+            owner = own;
+            other = oth;
+            relationship = 0;
+        }
+
+
         public int GetRelationship() {
             return relationship;
         }

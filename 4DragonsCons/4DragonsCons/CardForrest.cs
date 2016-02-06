@@ -53,5 +53,19 @@ namespace _4DragonsCons
         {
         }
 
+        public void OnRelation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnResearch()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return "Forrest";
+        }
     }
 }

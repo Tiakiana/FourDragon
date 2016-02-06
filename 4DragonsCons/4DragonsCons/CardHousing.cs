@@ -38,7 +38,7 @@ namespace _4DragonsCons
             owner.SetPopulation(1);
             owner.GetOngoing().Remove(this);
             owner.GetAssets().Add(this);
-            Console.WriteLine("Housing built");
+            Console.WriteLine("Housing built in " + owner.GetName());
            
         }
 
@@ -48,9 +48,25 @@ namespace _4DragonsCons
             this.owner.GetProjects().Remove(this);
         }
 
+
+
         public void OnProduction()
         {
         }
 
+        public void OnRelation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnResearch()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return "Housing";
+        }
     }
 }

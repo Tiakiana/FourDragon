@@ -38,7 +38,7 @@ namespace _4DragonsCons
             owner.SetFood(1);
             owner.GetOngoing().Remove(this);
             owner.GetAssets().Add(this);
-            Console.WriteLine("Hunter built");
+            Console.WriteLine("Hunter built in " + owner.GetName());
             CardHousing ch = new CardHousing(owner);
             owner.GetProjects().Add(ch);
         }
@@ -53,9 +53,22 @@ namespace _4DragonsCons
 
         }
 
+        public void OnRelation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnResearch()
+        {
+            throw new NotImplementedException();
+        }
+
         public void OnProduction()
         {
         }
-
+        public override string ToString()
+        {
+            return "Hunter";
+        }
     }
 }

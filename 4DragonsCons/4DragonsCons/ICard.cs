@@ -16,7 +16,8 @@ namespace _4DragonsCons
         void OnDraw();
         void OnProduction();
         void OnComplete();
-
+        void OnRelation();
+        void OnResearch();
 
     }
 }

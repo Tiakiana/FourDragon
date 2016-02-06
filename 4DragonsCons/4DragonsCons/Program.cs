@@ -11,7 +11,7 @@ namespace _4DragonsCons
         static void Main(string[] args)
         {
             Game g = new Game();
-            g.StartGame(1);
+            g.StartGame(5);
             g.RunGame();
 
             
