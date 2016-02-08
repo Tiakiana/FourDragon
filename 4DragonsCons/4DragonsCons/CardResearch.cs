@@ -38,6 +38,10 @@ namespace _4DragonsCons
         public void OnDraw()
         {
             owner.SetDiscovery(1);
+            foreach (ICard item in owner.GetAssets())
+            {
+               item.OnResearch();
+            }
         }
 
         public void OnProduction()

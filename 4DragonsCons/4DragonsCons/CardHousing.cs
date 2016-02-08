@@ -56,12 +56,12 @@ namespace _4DragonsCons
 
         public void OnRelation()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void OnResearch()
         {
-            throw new NotImplementedException();
+          //  throw new NotImplementedException();
         }
 
         public override string ToString()

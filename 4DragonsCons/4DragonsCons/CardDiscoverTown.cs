@@ -51,7 +51,7 @@ namespace _4DragonsCons
                 CardImproveRelation cir = new CardImproveRelation(owner), cir2 = new CardImproveRelation(owner);
                 owner.GetDecisions().Add(cir);
                 owner.GetDecisions().Add(cir2);
-
+                Console.WriteLine(owner.GetName() + " has discovered " + other.GetName());
 
             }
 

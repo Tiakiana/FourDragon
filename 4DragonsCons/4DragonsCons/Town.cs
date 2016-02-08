@@ -74,7 +74,7 @@ namespace _4DragonsCons
             decisions.Add(c5);
             decisions.Add(c6);
             decisions.Add(c7);
-            ScrambleStartDeck();
+            //ScrambleStartDeck();
             CardHousing ch = new CardHousing(this);
             CardForrest cf = new CardForrest(this);
             discoveries.Add(cf);
@@ -94,6 +94,9 @@ namespace _4DragonsCons
         public void SetFood(int chng)
         {
             food += chng;
+        }
+        public void SetName(string s) {
+            name = s;
         }
         public void SetPopulation(int chng)
         {
@@ -133,20 +136,7 @@ namespace _4DragonsCons
         #endregion getters and setters
 
 
-        void ScrambleStartDeck()
-        {
-            List<ICard> newdecisions = new List<ICard>();
-            int chosencard;
-            int decisionsCount = decisions.Count;
-            for (int i = 0; i < decisionsCount; i++)
-            {
-                chosencard = Randomizer.rnd.Next(0, decisions.Count);
-                newdecisions.Add(decisions[chosencard]);
-                decisions.RemoveAt(chosencard);
-            }
-
-            decisions = newdecisions;
-        }
+      
 
 
 
@@ -203,6 +193,36 @@ namespace _4DragonsCons
 
             
         }
+
+        //-----------------------------------------------------------------Do the Shuffle------------------------------------------------------------------------------
+
+        public void ScrambleStartDeck()
+        {
+            List<ICard> newdecisions = new List<ICard>();
+            int chosencard;
+            int decisionsCount = decisions.Count;
+            for (int i = 0; i < decisionsCount; i++)
+            {
+                chosencard = Randomizer.rnd.Next(0, decisions.Count);
+                newdecisions.Add(decisions[chosencard]);
+                decisions.RemoveAt(chosencard);
+                
+            }
+
+            decisions = newdecisions;
+
+            List<ICard> newdiscoveries = new List<ICard>();
+            int discoveriesCount = discoveries.Count;
+            for (int i = 0; i < discoveriesCount; i++)
+            {
+                chosencard = Randomizer.rnd.Next(0, discoveries.Count);
+                newdiscoveries.Add(discoveries[chosencard]);
+                discoveries.RemoveAt(chosencard);
+            }
+            discoveries = newdiscoveries;
+        }
+
+        
 
         public void ReshuffleDeckDecision() {
             List<ICard> shuffledDeck = new List<ICard>();

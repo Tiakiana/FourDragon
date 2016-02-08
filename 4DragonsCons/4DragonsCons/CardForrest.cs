@@ -45,7 +45,7 @@ namespace _4DragonsCons
             CardSawmill cs = new CardSawmill(owner);
             owner.GetDiscoveries().Add(cs);
 
-
+            Console.WriteLine(owner.GetName() + " discovers a forrest");
 
         }
 
@@ -55,12 +55,12 @@ namespace _4DragonsCons
 
         public void OnRelation()
         {
-            throw new NotImplementedException();
+            
         }
 
         public void OnResearch()
         {
-            throw new NotImplementedException();
+          
         }
 
         public override string ToString()

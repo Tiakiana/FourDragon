@@ -49,6 +49,7 @@
     <Compile Include="CardHunter.cs" />
     <Compile Include="CardImproveRelation.cs" />
     <Compile Include="CardProduction.cs" />
+    <Compile Include="CardRaid.cs" />
     <Compile Include="CardResearch.cs" />
     <Compile Include="CardSawmill.cs" />
     <Compile Include="CardStartProject.cs" />

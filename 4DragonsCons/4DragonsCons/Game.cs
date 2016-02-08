@@ -17,15 +17,15 @@ namespace _4DragonsCons
                 Town t = new Town();
                 towns.Add(t);
 
-                foreach (Town item in towns)
-                {
-                    item.ReshuffleDeckDecision();
-                }
              
 
             }
             AddTownsToDiscovery();
 
+            foreach (Town item in towns)
+            {
+                item.ScrambleStartDeck();
+            }
         }
 
         public void AddTownsToDiscovery() {
@@ -60,7 +60,7 @@ namespace _4DragonsCons
         public void TakeTurns() {
             foreach (Town item in towns)
             {
-                Console.WriteLine( item.TakeTurn());
+                item.TakeTurn();
             }
         }
 

@@ -14,13 +14,13 @@ namespace _4DragonsCons
 
             set;
         }
-
+        public Town other { get; set; }
         public CardWorsenRelationship(Town own)
         {
 
             owner = own;
         }
-
+        
         public int name
         {
             get; set;
@@ -38,7 +38,13 @@ namespace _4DragonsCons
 
         public void OnDraw()
         {
-          
+            
+            owner.GetRelations()[Randomizer.rnd.Next(0, owner.GetRelations().Count)].SetRelationship(-1);
+
+            foreach (ICard item in owner.GetAssets())
+            {
+                item.OnRelation();
+            }
 
 
         }
@@ -61,7 +67,7 @@ namespace _4DragonsCons
         {
 
             //Mangler implementering
-            return "Worsen relationship to ";
+            return "Worsen Relation";
         }
 
     }

@@ -31,12 +31,15 @@ namespace _4DragonsCons
 
         public void OnComplete()
         {
-            //throw new NotImplementedException();
         }
 
         public void OnDraw()
         {
             owner.SetMaterial(1);
+            foreach (ICard item in owner.GetAssets())
+            {
+                item.OnProduction();
+            }
         }
 
         public void OnProduction()
@@ -45,12 +48,10 @@ namespace _4DragonsCons
 
         public void OnRelation()
         {
-            throw new NotImplementedException();
         }
 
         public void OnResearch()
         {
-            throw new NotImplementedException();
         }
 
         public override string ToString()

@@ -38,8 +38,11 @@ namespace _4DragonsCons
 
         public void OnDraw()
         {
-
-
+            owner.GetRelations()[Randomizer.rnd.Next(0,owner.GetRelations().Count)].SetRelationship(1);
+            foreach (ICard item in owner.GetAssets())
+            {
+                item.OnRelation();
+            }
 
         }
 
