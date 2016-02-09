@@ -51,7 +51,15 @@ namespace _4DragonsCons
 
             }
             owner.GetRelations().Find(item => item.GetOther() == other).SetRelationship(1);
-          
+
+            try
+            {
+                owner.GetRelations().Find(item => item.GetOther() == other).GetOther().GetRelations().Find(item => item.GetOther() == other).SetRelationship(-1);
+            }
+            catch (System.Exception) {
+
+
+            }
 
         }
 
@@ -80,7 +88,7 @@ namespace _4DragonsCons
 
         public override string ToString()
         {
-            return "a raid against" + other.GetName();
+            return "a raid against " + other.GetName();
         }
     }
 }

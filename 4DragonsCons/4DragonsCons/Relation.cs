@@ -10,6 +10,7 @@ namespace _4DragonsCons
     {
         Town owner { get; }
         Town other { get; }
+        bool tradeAgreement { get; set; }
 
         int relationship { get; set; }
 
@@ -17,6 +18,7 @@ namespace _4DragonsCons
             owner = own;
             other = oth;
             relationship = 0;
+            tradeAgreement = false;
         }
         public Town GetOther() { return other; }
 
@@ -70,13 +72,38 @@ namespace _4DragonsCons
                         owner.GetProjects().RemoveAt(i);
                     }
                 }
+                for (int i = 0; i < owner.GetProjects().Count; i++)
+                {
+                    if (owner.GetProjects()[i].GetType() == typeof(CardTradeAgreement))
+                    {
+                        owner.GetProjects().RemoveAt(i);
+                    }
+                }
+                for (int i = 0; i < owner.GetAssets().Count; i++)
+                {
+                    if (owner.GetAssets()[i].GetType() == typeof(CardTradeAgreement))
+                    {
+                        owner.GetAssets().RemoveAt(i);
+                        
+                    }
+                }
+                for (int i = 0; i < owner.GetDecisions().Count; i++)
+                {
+                    if (owner.GetDecisions()[i].GetType() == typeof(CardTradeAgreement))
+                    {
+                        owner.GetDecisions().RemoveAt(i);
+                    }
+                }
+
 
             }
-            else if (relationship>1)
+            else if (relationship>1 && tradeAgreement == false)
             {
                 //Put trade in
                 Console.WriteLine(owner.GetName() + " wants to make trade agreement with  " + other.GetName());
-
+                CardTradeAgreement cta = new CardTradeAgreement(owner, other);
+                owner.GetProjects().Add(cta);
+                tradeAgreement = true;
             }
             else if (relationship>9)
             {

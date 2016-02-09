@@ -129,6 +129,20 @@ namespace _4DragonsCons
                         }
 
                         break;
+
+                    case 4:
+                        foreach (Town item in towns)
+                        {
+                            if (item.GetRelations().Count>0)
+                            {
+                                foreach (Relation relation in item.GetRelations())
+                                {
+                                    Console.WriteLine(item.GetName() + " thinks " + relation.GetRelationship() +  " of " + relation.GetOther().GetName());
+                                }
+                            }
+                        }
+                        break;
+
                     default:
                         break;
                 }
